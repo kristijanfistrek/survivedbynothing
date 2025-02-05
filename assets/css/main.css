@@ -105,7 +105,7 @@ header {
 .hero-section {
     position: relative;
     height: 100vh; /* Full viewport height */
-    background: url('/assets/img/SBN-Live.jpg') no-repeat center center / cover;
+    background: url('../img/SBN-Live.jpg') no-repeat center center / cover;
     background-attachment: fixed;
     display: flex;
     justify-content: center;
