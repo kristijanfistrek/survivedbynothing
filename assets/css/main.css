@@ -199,53 +199,17 @@ header {
 .music-container {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 1200px;
 }
 
 .bandcamp-player {
-    flex: 1;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     margin-right: 30px; /* Keeps the separation from the right side */
-}
-
-.available-on {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.available-on h3 {
-    font-size: 1.25rem;
-    color: #ccc;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-.icons {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.icons a {
-    margin-right: 20px;
-    display: inline-block;
-}
-
-.icons img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-}
-
-.icons img:hover {
-    transform: scale(1.1);
 }
 
 #music .music-header p {
@@ -256,12 +220,49 @@ header {
     margin-bottom: 20px; /* Space between "Listen to our latest EP:" and the player */
 }
 
-.available-on h3 {
-    margin-top: 20px; /* Add space above "Available on:" */
+/* Concerts Section */
+.concerts-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background: url('../img/SBN-Live.jpg') no-repeat center center / cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
 }
 
-.available-on .icons {
-    margin-top: 15px; /* Space between "Available on:" subtitle and the icons */
+.concerts-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
 }
+
+.content-wrapper {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 800px;
+    z-index: 2;
+}
+
+.concerts-title {
+    font-family: 'Road Rage', cursive;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.concerts-subtitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.25rem;
+}
+
 
 
